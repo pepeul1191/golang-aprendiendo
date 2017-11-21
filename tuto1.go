@@ -29,4 +29,8 @@ func main(){
 		fmt.Println(i)
 		i = i + 1
 	}
+	fmt.Println("++++++++++++++++++++++++++++++++++++")
+	for (i := 0; i < 5; i++){
+		fmt.Println(i)
+	}
 }
