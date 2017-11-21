@@ -30,7 +30,16 @@ func main(){
 		i = i + 1
 	}
 	fmt.Println("++++++++++++++++++++++++++++++++++++")
-	for (i := 0; i < 5; i++){
-		fmt.Println(i)
+	for k := 0; k < 5; k++{
+		fmt.Println(k)
+	}
+	fmt.Println("++++++++++++++++++++++++++++++++++++")
+	myEdad := 9
+	if myEdad >= 18 && myEdad < 60 {
+		fmt.Println("Eres mayor de edad")
+	} else if myEdad >= 60 {
+		fmt.Println("Estas viejo!!!")
+	} else {
+		fmt.Println("Eres menor de edad")
 	}
 }
