@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+import "strconv"
 
 func main(){
 	fmt.Println("hola mundo")
@@ -82,6 +83,8 @@ func main(){
 	permiso2 := Permiso{2, "Editar Usuario", "editar_usuario"}
 	fmt.Println(permiso2)
 	fmt.Println(permiso2.getLlave())
+	rol1 := Rol{1, "Gestor de Usuarios"}
+	fmt.Println(rol1.toString())
 }
 
 func sumaArreglo(numbres []float64) float64{ 
@@ -99,7 +102,11 @@ func factorial(num int) int{
 	return num * factorial(num - 1)
 }
 //++++++++++++++++++++++++++++++++++++++++++++++++
-type Permiso struct{
+type demoInterface interface{
+	toString() string
+}
+
+type Permiso struct {
 	id int
 	nombre string
 	llave string
@@ -107,5 +114,14 @@ type Permiso struct{
 
 func (permiso *Permiso) getLlave() string{
 	return "Llave : " + permiso.llave
+}
+
+type Rol struct{
+	id int
+	nombre string
+}
+
+func (rol *Rol) toString() string{
+	return "id : " + strconv.Itoa(rol.id) + ", nombre : " + rol.nombre
 }
 //++++++++++++++++++++++++++++++++++++++++++++++++
