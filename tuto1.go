@@ -34,6 +34,12 @@ func main(){
 		fmt.Println(k)
 	}
 	fmt.Println("++++++++++++++++++++++++++++++++++++")
+	favNumbers2 := [3]float64 {1.2, 5, 8}
+	fmt.Println(favNumbers2)
+	for i, value := range favNumbers2 {
+		fmt.Println(i, " - ", value)		
+	}
+	fmt.Println("++++++++++++++++++++++++++++++++++++")
 	myEdad := 9
 	if myEdad >= 18 && myEdad < 60 {
 		fmt.Println("Eres mayor de edad")
@@ -42,4 +48,16 @@ func main(){
 	} else {
 		fmt.Println("Eres menor de edad")
 	}
+	fmt.Println("++++++++++++++++++++++++++++++++++++")
+	var favNumbers[3] float64
+	favNumbers[0] = 12 
+	favNumbers[1] = 2.3
+	favNumbers[2] = 6.45
+	fmt.Println(favNumbers)
+	fmt.Println("++++++++++++++++++++++++++++++++++++")
+	presAge := make(map[string] int)
+	presAge["Pepito"] = 29
+	presAge["Yacky"] = 27
+	fmt.Println(presAge)
+	fmt.Println(presAge["Yacky"])
 }
