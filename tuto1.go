@@ -76,6 +76,11 @@ func main(){
 	fmt.Println(promedio())
 	fmt.Println("++++++++++++++++++++++++++++++++++++")
 	fmt.Println("Factorial : ", factorial(5))
+	fmt.Println("++++++++++++++++++++++++++++++++++++")
+	permiso1 := Permiso{id : 1, nombre : "Crear Usuario", llave : "crear_usuario"}
+	fmt.Println(permiso1)
+	permiso2 := Permiso{2, "Editar Usuario", "editar_usuario"}
+	fmt.Println(permiso2)
 }
 
 func sumaArreglo(numbres []float64) float64{ 
@@ -91,4 +96,10 @@ func factorial(num int) int{
 		return 1
 	}
 	return num * factorial(num - 1)
+}
+
+type Permiso struct{
+	id int
+	nombre string
+	llave string
 }
