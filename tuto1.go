@@ -81,6 +81,7 @@ func main(){
 	fmt.Println(permiso1)
 	permiso2 := Permiso{2, "Editar Usuario", "editar_usuario"}
 	fmt.Println(permiso2)
+	fmt.Println(permiso2.getLlave())
 }
 
 func sumaArreglo(numbres []float64) float64{ 
@@ -97,9 +98,14 @@ func factorial(num int) int{
 	}
 	return num * factorial(num - 1)
 }
-
+//++++++++++++++++++++++++++++++++++++++++++++++++
 type Permiso struct{
 	id int
 	nombre string
 	llave string
 }
+
+func (permiso *Permiso) getLlave() string{
+	return "Llave : " + permiso.llave
+}
+//++++++++++++++++++++++++++++++++++++++++++++++++
