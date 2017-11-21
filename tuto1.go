@@ -125,3 +125,4 @@ func (rol *Rol) toString() string{
 	return "id : " + strconv.Itoa(rol.id) + ", nombre : " + rol.nombre
 }
 //++++++++++++++++++++++++++++++++++++++++++++++++
+// 38'44
