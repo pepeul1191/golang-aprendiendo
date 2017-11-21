@@ -60,4 +60,35 @@ func main(){
 	presAge["Yacky"] = 27
 	fmt.Println(presAge)
 	fmt.Println(presAge["Yacky"])
+	fmt.Println("++++++++++++++++++++++++++++++++++++")
+	listNum := []float64{1,2,3,4,5}
+	fmt.Println("SUMA : ", sumaArreglo(listNum))
+	fmt.Println("++++++++++++++++++++++++++++++++++++")
+	promedio := func() float32{
+		var x1 float32 = 1
+		var x2 float32 = 10
+		var x3 float32 = 11
+			fmt.Println("1 --------")
+			fmt.Println(x1 + x2 + x3)
+			fmt.Println("2 --------")
+		return (x1 + x2 + x3)/3
+	}
+	fmt.Println(promedio())
+	fmt.Println("++++++++++++++++++++++++++++++++++++")
+	fmt.Println("Factorial : ", factorial(5))
+}
+
+func sumaArreglo(numbres []float64) float64{ 
+	sum := 0.0
+	for _, val := range numbres{
+		sum = sum + val
+	}
+	return sum
+}
+
+func factorial(num int) int{
+	if num == 0{
+		return 1
+	}
+	return num * factorial(num - 1)
 }
